@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AnimeWorld</title>
+
+        <link rel="stylesheet" href="css/navbar.css">
+        <link rel="stylesheet" href="css/spotlight.css">
+        <link rel="stylesheet" href="css/season.css">
+        <link rel="stylesheet" href="css/day.css">
+        <link rel="stylesheet" href="css/search.css">
+        <link rel="stylesheet" href="css/website.css">
+
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="nav_bar">
+            <div class="left_side">
+                <p class="site_logo">AnimeWorld</p>
+            </div>
+
+            <div class="middle_side">
+                <div class="search_bar">
+                    <input type="text" id="searchInput" placeholder="Find Anime" name="search">
+                    <button id="search_button" class="search_button">
+                        <img src="/assets/search_icom.png">
+                    </button>
+                </div>
+            </div>
+
+            <div class="right_side">
+                <div class="middle_extra">TV</div>
+                <div class="middle_extra">Movies</div>
+                <div class="middle_extra">Most Popular</div>
+                <button>Login</button>
+            </div>
+        </div>
+
+        <div class="upper_part">
+            <div class="spotlight">
+                <div class="background-overlay"></div>
+                <div class="left_spot">
+                    <div class="ranking">#1 Spotlight</div>
+                    <div class="title">Title</div>
+                    <div class="anime_info">
+
+                       <div class="type">
+                            <img src="/assets/play_icon.png">
+                            <p>TV</p>
+                       </div>
+
+                       <div class="time">
+                            <img src="/assets/time_icon.png">
+                            <div>23m</div>
+                       </div>
+
+                       <div class="date">
+                            <img src="/assets/calendar_icon.png">
+                            <p>May 12,2024</p>
+                       </div>
+
+                       <div class="quality">
+                            <button>HD</button>
+                       </div>
+
+                    </div>
+
+                    <div class="eps_count">
+
+                        <button class="sub">
+                            <img src="/assets/cc_icon.png">
+                            <p>12</p>
+                        </button>
+
+                        <button class="dubs">
+                            <img src="/assets/microphone_icon.png">
+                            <p>12</p>
+                        </button>
+
+                    </div>
+
+                    <div class="description">
+                        hello World
+                    </div>
+
+                    <div class="anime_buttons">
+                        <button class="watch_button">
+                            <img src="/assets/play_icon.png">
+                            <p>Watch Now</p>
+                        </button>
+                        <button class="detail">
+                            Detail >
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="right_spot">
+                    <button>Next</button>
+                    <button>Back</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="middle_part">
+
+            <div class="winter_anime"> 
+        
+                <div class="class_title">Winter Anime</div>
+        
+                <div class="winter_anime_template" style="display: none;"> 
+                    <img class="summer_img" src=""> 
+                    <div class="summer_total">
+                        <div class="summer_title"></div> 
+                        <div class="summer_info"> 
+                            <button class="sub">
+                                <img src="/assets/cc_icon.png">
+                                <p></p>
+                            </button>
+                            <button class="dubs">
+                                <img src="/assets/microphone_icon.png">
+                                <p></p>
+                            </button>
+                            <div class="summer_type"></div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="spring_anime"> 
+        
+                <div class="class_title">Spring Anime</div>
+        
+                <div class="spring_anime_template" style="display: none;"> 
+                    <img class="summer_img" src=""> 
+                    <div class="summer_total">
+                        <div class="summer_title"></div> 
+                        <div class="summer_info"> 
+                            <button class="sub">
+                                <img src="/assets/cc_icon.png">
+                                <p></p>
+                            </button>
+                            <button class="dubs">
+                                <img src="/assets/microphone_icon.png">
+                                <p></p>
+                            </button>
+                            <div class="summer_type"></div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="summer_anime"> 
+        
+                <div class="class_title">Summer Anime</div>
+        
+                <div class="summer_anime_template" style="display: none;"> 
+                    <img class="summer_img" src=""> 
+                    <div class="summer_total">
+                        <div class="summer_title"></div> 
+                        <div class="summer_info"> 
+                            <button class="sub">
+                                <img src="/assets/cc_icon.png">
+                                <p></p>
+                            </button>
+                            <button class="dubs">
+                                <img src="/assets/microphone_icon.png">
+                                <p></p>
+                            </button>
+                            <div class="summer_type"></div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fall_anime"> 
+        
+                <div class="class_title">Fall Anime</div>
+        
+                <div class="fall_anime_template" style="display: none;"> 
+                    <img class="summer_img" src=""> 
+                    <div class="summer_total">
+                        <div class="summer_title"></div> 
+                        <div class="summer_info"> 
+                            <button class="sub">
+                                <img src="/assets/cc_icon.png">
+                                <p></p>
+                            </button>
+                            <button class="dubs">
+                                <img src="/assets/microphone_icon.png">
+                                <p></p>
+                            </button>
+                            <div class="summer_type"></div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="lower_part">
+
+            <div class="day">Monday</div>
+
+            <div class="monday">
+
+                <div class="anime_day_template" style="display: none;">
+                    <div>
+                        <img class="day_image" src="">
+                        <div class="inner_info">
+                            <button class="sub">
+                                <img src="/assets/cc_icon.png">
+                                <p></p>
+                            </button>
+                            <button class="dubs">
+                                <img src="/assets/microphone_icon.png">
+                                <p></p>
+                        </div>
+                        </button>
+                    </div>
+
+                    <div class="add_info">
+                        <div class="anime_day_title"></div>
+                        <div class="anime_day_info">
+                            <div class="day_type"></div>
+                            <div class="day_time">23m</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="day">Tuesday</div>
+
+            <div class="tuesday">
+
+                <div class="anime_day_template" style="display: none;">
+
+                    <div>
+                        <img class="day_image" src="">
+                        <div class="inner_info">
+                            <button class="sub">
+                                <img src="/assets/cc_icon.png">
+                                <p></p>
+                            </button>
+                            <button class="dubs">
+                                <img src="/assets/microphone_icon.png">
+                                <p></p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="anime_day_title"></div>
+                        <div class="anime_day_info">
+                            <div class="day_type"></div>
+                            <div class="day_time">23m</div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="day" >Wednesday</div>
+
+            <div class="wednesday">
+
+                <div class="anime_day_template" style="display: none;">
+
+                    <div>
+                        <img class="day_image" src="">
+                        <div class="inner_info">
+                            <button class="sub">
+                                <img src="/assets/cc_icon.png">
+                                <p></p>
+                            </button>
+                            <button class="dubs">
+                                <img src="/assets/microphone_icon.png">
+                                <p></p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="anime_day_title"></div>
+                        <div class="anime_day_info">
+                            <div class="day_type"></div>
+                            <div class="day_time">23m</div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="day">Thursday</div>
+
+            <div class="thursday">
+
+                <div class="anime_day_template" style="display: none;">
+
+                    <div>
+                        <img class="day_image" src="">
+                        <div class="inner_info">
+                            <button class="sub">
+                                <img src="/assets/cc_icon.png">
+                                <p></p>
+                            </button>
+                            <button class="dubs">
+                                <img src="/assets/microphone_icon.png">
+                                <p></p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="anime_day_title"></div>
+                        <div class="anime_day_info">
+                            <div class="day_type"></div>
+                            <div class="day_time">23m</div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="day">Friday</div>
+
+            <div class="friday">
+
+                <div class="anime_day_template" style="display: none;">
+
+                    <div>
+                        <div class="inner_info">
+                            <button class="sub">
+                                <img src="/assets/cc_icon.png">
+                                <p></p>
+                            </button>
+                            <button class="dubs">
+                                <img src="/assets/microphone_icon.png">
+                                <p></p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="anime_day_title"></div>
+                        <div class="anime_day_info">
+                            <div class="day_type"></div>
+                            <div class="day_time">23m</div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="day">Saturday</div>
+
+            <div class="saturday">
+
+                <div class="anime_day_template" style="display: none;">
+
+                    <div>
+                        <img class="day_image" src="">
+                        <div class="inner_info">
+                            <button class="sub">
+                                <img src="/assets/cc_icon.png">
+                                <p></p>
+                            </button>
+                            <button class="dubs">
+                                <img src="/assets/microphone_icon.png">
+                                <p></p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="anime_day_title"></div>
+                        <div class="anime_day_info">
+                            <div class="day_type"></div>
+                            <div class="day_time">23m</div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            
+            <div class="day">Sunday</div>
+
+            <div class="sunday">
+
+                <div class="anime_day_template" style="display: none;">
+
+                    <div>
+                        <img class="day_image" src="">
+                        <div class="inner_info">
+                            <button class="sub">
+                                <img src="/assets/cc_icon.png">
+                                <p></p>
+                            </button>
+                            <button class="dubs">
+                                <img src="/assets/microphone_icon.png">
+                                <p></p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="anime_day_title"></div>
+                        <div class="anime_day_info">
+                            <div class="day_type"></div>
+                            <div class="day_time">23m</div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+
+        <div class="search" style="display: none;">
+
+            <div class="search_result_label"></div>
+
+            <div class="search_anime">
+
+                <div class="query"></div>
+
+                <div class="anime_search_template" style="display: none;">
+
+                    <div>
+                        <img class="search_image" src="">
+                        <div class="inner_info">
+                            <button class="sub">
+                                <img src="/assets/cc_icon.png">
+                                <p></p>
+                            </button>
+                            <button class="dubs">
+                                <img src="/assets/microphone_icon.png">
+                                <p></p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="anime_search_title"></div>
+                        <div class="anime_search_info">
+                            <div class="search_type"></div>
+                            <div class="search_time">23m</div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <script src="/javascript/script.js"></script>
+    </body>
+</html>

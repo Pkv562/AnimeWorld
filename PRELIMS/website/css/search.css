@@ -1,0 +1,85 @@
+.search {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    flex-direction: row;
+    padding-left: 50px;
+    position: relative;
+}
+
+.search_result_label {
+    margin-top: 20px;
+    position: absolute; 
+    top: 10px; 
+    left: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: blueviolet;
+    z-index: 10;    
+}
+
+.sub img, .dubs img {
+    height: 15px;
+    width: 15px;
+}
+
+.inner_info {
+    display: flex;
+    flex-direction: row;
+    margin-top: -70px;
+    padding-left: 10px;
+    gap: 10px;
+}
+
+.search_anime {
+    display: flex;
+    flex-direction: row;
+    padding-right: 20px;
+    margin-top: 40px;
+}
+
+.search_image {
+    height: 250px;
+    width: 200px;
+    border-radius: 8px;
+}
+
+.search_image:active {
+    transform: scale(0.9);
+    opacity: calc(0.4);
+}
+
+.anime_search_template {
+    display: flex;
+    flex-direction: column;
+    /* background-color: burlywood; */
+    margin-top: 50px;
+    width: 200px;
+}
+
+.anime_search_title {
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.anime_search_info {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    color: gray;
+    margin-top: 8px;
+}
+
+.add_info {
+    margin-top: 20px;
+}
+
+.query {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 30px;
+    padding-right: 20px;
+}
+

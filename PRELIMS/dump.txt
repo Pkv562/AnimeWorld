@@ -1,0 +1,96 @@
+const animeAPI = 'https://api.jikan.moe/v4/anime'; // API source
+let currentAnime = 0;
+let animeList = [];
+
+// Fetch API Data (Using Async/Await)
+async function fetchAnimeData() {
+    try {
+        const response = await fetch(animeAPI);
+
+        if (!response.ok) {
+            throw new Error("Network Error! Cannot reach the site");  // Prints error if site can't be reached
+        }
+
+        const animeData = await response.json(); // Convert response to JSON
+        animeList = animeData.data;
+
+        if (animeList.length > 0) {
+            updateSpotlight(0); // Update with the first anime
+            updateAiring();
+        }
+
+    } catch (error) {
+        console.log('Error:', error);
+    }
+}
+// Function to Update Spotlight
+function updateSpotlight(index) {
+    const anime = animeList[index];
+
+    if (!anime) return;
+
+    const maxSynopsis = 250;
+
+    let synopsis = anime.synopsis || "No description available";
+    if (synopsis.length > maxSynopsis) {
+        synopsis = synopsis.substring(0, maxSynopsis) + "...";
+    }
+
+    const maxTitle = 20;
+
+    let title = anime.title || "No Title available";
+    if (title.length > maxTitle) {
+        title = title.substring(0, maxTitle) + "...";
+    }
+
+    document.querySelector('.title').textContent = title;
+    document.querySelector('.description').textContent = synopsis;
+    document.querySelector('.ranking').textContent = `#${anime.rank} Ranked`;
+
+    document.querySelector('.spotlight').style.backgroundImage = `url(${anime.images.jpg.large_image_url})`;
+
+    document.querySelector('.type p').textContent = `Type: ${anime.type}`;
+    document.querySelector('.sub p').textContent = anime.episodes ? `Episodes: ${anime.episodes}` : "Episodes: Unknown";
+    document.querySelector('.dubs p').textContent = anime.episodes ? `Episodes: ${anime.episodes}` : "Episodes: Unknown";
+
+    // document.querySelector('.rating p').textContent = `Rating: ${anime.rating}`;
+    // document.querySelector('.date p').textContent = `Year: ${anime.year}`;
+}
+
+document.querySelector(`.right_spot button:nth-child(1)`).addEventListener('click', () => {
+    currentAnime = (currentAnime + 1) % animeList.length;
+    updateSpotlight(currentAnime);
+});
+
+document.querySelector(`.right_spot button:nth-child(2)`).addEventListener('click', () => {
+    currentAnime = (currentAnime - 1 + animeList.length) % animeList.length;
+    updateSpotlight(currentAnime);
+});
+
+function updateAiring() {
+    const summerAnimeList = animeList.filter(anime => anime.season && anime.season.toLowerCase() === "summer");
+
+    if (!summerAnimeList.length) {
+        console.log("No summer anime found in the dataset.");
+        return;
+    }
+
+    const summerAnimeElements = document.querySelectorAll('.summer_anime'); // Assuming `.summer_anime` is the class for each container
+
+    summerAnimeElements.forEach((element, index) => {
+        if (summerAnimeList[index]) {
+            element.querySelector('.summer_title').textContent = summerAnimeList[index].title || "No Title";
+            element.querySelector('.sub').textContent = `Episodes: ${summerAnimeList[index].episodes || "Unknown"}`;
+            element.querySelector('.dubs').textContent = `Episodes: ${summerAnimeList[index].episodes || "Unknown"}`;
+            element.querySelector('.summer_type').textContent = `. ${summerAnimeList[index].type || "Unknown"}`;
+        } else {
+            element.querySelector('.summer_title').textContent = "No Data Available";
+            element.querySelector('.summer_episodes').textContent = "Episodes: N/A";
+            element.querySelector('.summer_type').textContent = "Type: N/A";
+        }
+    });
+}
+
+
+
+fetchAnimeData();

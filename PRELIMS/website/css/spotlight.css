@@ -1,0 +1,202 @@
+.body {
+    margin: 0;
+}
+
+.upper_part {
+    display: flex;
+    width: 100vw;  
+    height: 100vh; 
+    max-height: 450px;
+    color: white;
+}
+
+.spotlight {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/demon_slayer.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    /* max-height: 400px; */
+    
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 0;
+    pointer-events: none;
+}
+
+.left_spot {
+    flex-direction: column;
+    /* background-color: aquamarine; */
+    flex: 1; 
+    padding-left: 20px;
+    padding-top: 50px;
+    z-index: 1;
+    position: relative;
+}
+
+.right_spot {
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    /* background-color: blueviolet; */
+    flex: 1; 
+    flex-direction: column;
+    padding-bottom: 40px;
+    z-index: 1;
+    position: relative;
+    margin-right: 50px;
+}
+
+.right_spot button {
+    justify-self: flex-end;
+    align-self: flex-end;
+    margin-right: 20px;
+    margin-top: 10px;
+    width: 50px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background-color: gray;
+    color: white;
+    
+}
+
+.right_spot button:active {
+    transform: scale(0.9);
+    opacity: calc(0.4);
+}
+
+.anime_info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.anime_info img {
+    height: 15px;
+    width: 15px;
+    -webkit-filter: invert(100%); 
+    filter: invert(100%);
+}
+
+.type, .time, .date {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2px
+}
+
+.eps_count {
+    margin-top: -40px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: black;
+}
+
+.eps_count img {
+    height: 15px;
+    width: 15px;
+    /* -webkit-filter: invert(100%);
+    filter: invert(100%); */
+}
+
+.sub, .dubs {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2px;
+    height: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.sub {
+    background-color: greenyellow;
+}
+
+.dubs {
+    background-color: pink;
+}
+
+.anime_buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.anime_buttons button {
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    gap: 2px;
+}
+
+.anime_buttons img {
+    height: 15px;
+    width: 15px;   
+}
+
+.watch_button {
+    height: 40px;
+    width: 100px;
+    background-color:khaki;
+}
+
+.watch_button:active {
+    transform: scale(0.9);
+    opacity: calc(0.4);
+}
+
+.detail {
+    height: 40px;
+    width: 70px;
+    color: white;
+    background-color: grey;
+}
+
+.detail:active {
+    transform: scale(0.9);
+    opacity: calc(0.4);
+}
+
+.watch_button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 5px;
+}
+
+.ranking, .title {
+    margin-top: 15px;
+}
+
+.title {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.quality button {
+    background-color: gold;
+    border: none;
+    border-radius: 5px;
+}
+
+

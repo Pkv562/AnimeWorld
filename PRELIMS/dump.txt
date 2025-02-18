@@ -75,7 +75,7 @@ function updateAiring() {
         return;
     }
 
-    const summerAnimeElements = document.querySelectorAll('.summer_anime'); // Assuming `.summer_anime` is the class for each container
+    const summerAnimeElements = document.querySelectorAll('.summer_anime'); 
 
     summerAnimeElements.forEach((element, index) => {
         if (summerAnimeList[index]) {
